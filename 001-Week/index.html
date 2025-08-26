@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Andrew Pickworth — Personal Bio & Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal bio and portfolio for Andrew Pickworth: embedded systems, low-power IoT, BLE, LoRa telemetry, and product collaboration. Includes skills, certificates, and contact form.">
+</head>
+<body>
+  <header>
+    <h1>Andrew Pickworth</h1>
+    <nav aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About</h2>
+      <img src="AndrewProfilePicture.png" alt="Cartoon style headshot of Andrew Pickworth" width="240" height="240">
+      <p>
+        I’m an embedded systems developer and practical problem-solver focused on low-power IoT. I work extensively with ESP32-class hardware, BLE advertising and connection flows, and LoRa/LoRaWAN telemetry for metering and environmental sensing. 
+        On the device side I’m comfortable with ESP-IDF/Arduino, sleep-mode optimization, SDI-12 sensor integration, and building usable on-device UIs with LVGL/TFT. 
+        On the product side I value clean interfaces and reliable data paths—designing simple provisioning flows, building basic backends and dashboards when needed, and collaborating closely with partners to turn prototypes into field-ready tools. 
+        I care about accuracy, battery life, and clarity: systems should be measurable, dependable, and easy to use.
+      </p>
+      <p>
+        Find me on <a href="https://github.com/AndrewPickworth" target="_blank" rel="noopener">GitHub</a> or email <a href="mailto:contact@notaproxy.lol">contact@notaproxy.lol</a>.
+      </p>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+
+      <article aria-labelledby="skill-embedded">
+        <h3 id="skill-embedded">Embedded & IoT</h3>
+        <ul>
+          <li>ESP32 (ESP-IDF & Arduino), peripheral bring-up, board/pin configuration</li>
+          <li>Low-power design: external 32&nbsp;kHz crystals, sleep scheduling, current profiling</li>
+          <li>BLE advertising/scan response tuning; simple GATT flows</li>
+          <li>LoRa/LoRaWAN telemetry, frame parsing for metering</li>
+          <li>LVGL + TFT displays; basic on-device UX</li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="skill-data">
+        <h3 id="skill-data">Data & Integration</h3>
+        <ul>
+          <li>Sensor interfacing (SDI-12 and common digital/analog sensors)</li>
+          <li>Lightweight REST/JSON pipelines and basic dashboards</li>
+          <li>Prototyping, field testing, and documentation</li>
+        </ul>
+      </article>
+
+      <article aria-labelledby="skill-collab">
+        <h3 id="skill-collab">Product & Collaboration</h3>
+        <ul>
+          <li>Hardware–software integration and partner coordination</li>
+          <li>Usability-first provisioning and setup flows</li>
+          <li>Clear issue triage, iteration, and hand-off docs</li>
+        </ul>
+      </article>
+    </section>
+    <section id="portfolio" aria-labelledby="portfolio-heading">
+      <h2 id="portfolio-heading">Portfolio</h2>
+
+      <article aria-labelledby="proj-lpble">
+        <h3 id="proj-lpble">Low-Power BLE Beacon (ESP32-C6)</h3>
+        <p>
+          Built and tuned a BLE advertising demo targeting sub-milliamp averages using sleep modes and a 32&nbsp;kHz external crystal. Focus on measurable current draw, stable intervals, and repeatable test methodology.
+        </p>
+      </article>
+
+      <article aria-labelledby="proj-lora">
+        <h3 id="proj-lora">LoRa Water-Meter Telemetry & Frame Decoding</h3>
+        <p>
+          Implemented custom frame parsing for volume/flow units and integrated a lightweight telemetry pipeline to visualize usage patterns. Emphasis on robust decoding, retries, and field resilience.
+        </p>
+      </article>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>
+        Prefer email or GitHub issues for project discussions. The form below opens your mail client pre-filled with the message.
+      </p>
+      <form action="mailto:contact@notaproxy.lol" method="post" enctype="text/plain">
+        <div>
+          <label for="name">Name</label><br>
+          <input id="name" name="name" type="text" required>
+        </div>
+        <div>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" required>
+        </div>
+        <div>
+          <label for="subject">Subject</label><br>
+          <select id="subject" name="subject">
+            <option value="General enquiry">General enquiry</option>
+            <option value="Project collaboration">Project collaboration</option>
+            <option value="Speaking/mentoring">Speaking/mentoring</option>
+          </select>
+        </div>
+        <div>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button type="submit">Send message</button>
+      </form>
+
+      <p>
+        Or reach me directly:<br>
+        GitHub: <a href="https://github.com/AndrewPickworth" target="_blank" rel="noopener">github.com/AndrewPickworth</a><br>
+        Email: <a href="mailto:contact@notaproxy.lol">contact@notaproxy.lol</a>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <small>© <span id="year">2025</span> Andrew Pickworth. All rights reserved.</small>
+  </footer>
+</body>
+</html>
