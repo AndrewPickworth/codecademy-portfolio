@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>NotAProxy — Simple IoT Landing</title>
+  <meta name="description" content="Low-power IoT solutions and telemetry integrations. Discover features, pricing, and get in touch.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+  <!-- CSS-only theme toggle (checkbox hack) -->
+  <input type="checkbox" id="theme-toggle" class="visually-hidden" aria-hidden="true">
+  <!-- CSS-only mobile nav toggle -->
+  <input type="checkbox" id="nav-toggle" class="visually-hidden" aria-hidden="true">
+
+  <!-- Semantic header + nav -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">NotAProxy</a>
+
+      <!-- Mobile hamburger (CSS only) -->
+      <label for="nav-toggle" class="hamburger" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </label>
+
+      <nav id="primary-nav" aria-label="Primary">
+        <ul class="nav">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#showcase">Showcase</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a class="cta-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      </div>
+  </header>
+
+  <!-- Hero (compelling headline + CTA) -->
+  <section class="hero" role="region" aria-labelledby="hero-title">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <h1 id="hero-title">Battery-friendly IoT that just works</h1>
+        <p>From BLE beacons to LoRa telemetry, launch devices with measurable battery life, clean provisioning, and reliable data flows.</p>
+        <a class="btn" href="#contact">Get started</a>
+        <a class="btn btn-ghost" href="#features">See features</a>
+      </div>
+      <video id="hero-video" autoplay muted loop playsinline aria-label="A video showcasing IoT devices in action"><source src="BannerMedia.mp4" type="video/mp4">Your browser does not support the video tag.</video>
+    </div>
+  </section>
+
+  <main>
+    <!-- Section 1: Features (Grid layout with named areas) -->
+    <section id="features" class="features" aria-labelledby="features-title">
+      <div class="container">
+        <h2 id="features-title">Features</h2>
+        <div class="features-grid">
+          <article class="card feature-a">
+            <h3>Low Power</h3>
+            <p>Sleep scheduling and current profiling to reach sub-milliamp averages.</p>
+          </article>
+          <article class="card feature-b">
+            <h3>Connectivity</h3>
+            <p>BLE advertising &amp; GATT flows, plus LoRa/LoRaWAN frames for metering and environmental sensing.</p>
+          </article>
+          <article class="card feature-c">
+            <h3>On-Device UX</h3>
+            <p>LVGL/TFT interfaces with clear provisioning and status feedback for field applications.</p>
+          </article>
+          <article class="card feature-d">
+            <h3>Telemetry</h3>
+            <p>Lightweight REST/JSON pipelines and simple dashboards to validate deployments quickly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Showcase (Flex layout) -->
+    <section id="showcase" class="showcase" aria-labelledby="showcase-title">
+      <div class="container">
+        <h2 id="showcase-title">Showcase</h2>
+        <div class="cards">
+          <article class="card">
+            <img src="ESP32BlinkGif.gif" alt="A compact ESP32 device prototype on a desk">
+            <h3>ESP32 Beacon</h3>
+            <p>1s advertising, sleep-first design, and measurable lifetime gains.</p>
+          </article>
+          <article class="card">
+            <img src="MeterGif.gif" alt="A chart of water usage received from LoRa meters">
+            <h3>LoRa Meter Frames</h3>
+            <p>Custom frame parsing for volume/flow with resilient retries and buffering.</p>
+          </article>
+          <article class="card">
+            <img src="LVGL.gif" alt="LVGL UI on a small TFT display">
+            <h3>LVGL UI</h3>
+            <p>Clear on-device setup and status to accelerate field deployment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Pricing (Flexbox) -->
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title">Pricing</h2>
+        <div class="tiers">
+          <article class="card">
+            <h3>Starter</h3>
+            <p><strong>$0</strong> / trial</p>
+            <ul>
+              <li>Email support</li>
+              <li>Basic dashboard</li>
+              <li>1 device</li>
+            </ul>
+            <a class="btn" href="#contact">Try it</a>
+          </article>
+          <article class="card highlight">
+            <h3>Pro</h3>
+            <p><strong>$49</strong> / month</p>
+            <ul>
+              <li>Priority support</li>
+              <li>Advanced telemetry</li>
+              <li>Up to 25 devices</li>
+            </ul>
+            <a class="btn" href="#contact">Choose Pro</a>
+          </article>
+          <article class="card">
+            <h3>Teams</h3>
+            <p><strong>Custom</strong></p>
+            <ul>
+              <li>SLAs &amp; training</li>
+              <li>Custom builds</li>
+              <li>Unlimited devices</li>
+            </ul>
+            <a class="btn" href="#contact">Contact sales</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact (simple info block) -->
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <p>Email: <a href="mailto:contact@notaproxy.lol">contact@notaproxy.lol</a> · GitHub: <a href="https://github.com/AndrewPickworth" target="_blank" rel="noopener">AndrewPickworth</a></p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year">2025</span> NotAProxy · <a href="mailto:contact@notaproxy.lol">contact@notaproxy.lol</a></small>
+    </div>
+  </footer>
+</body>
+</html>

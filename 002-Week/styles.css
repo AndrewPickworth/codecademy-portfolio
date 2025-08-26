@@ -1,0 +1,237 @@
+/* -------------------------------------------------------
+   Variables + base
+-------------------------------------------------------- */
+:root{
+  --max: 1100px;
+  --space: 16px;
+  --radius: 14px;
+
+  /* Light theme */
+  --ink: #0e1116;
+  --bg: hsl(225, 72%, 47%);
+  --brand: rgb(42,102,255);
+  --brand-ink: white;
+  --muted: hsl(220 8% 45%);
+  --card: #ffffff;
+  --border: hsl(220 15% 88%);
+  --accent: hsl(45 100% 50%);
+}
+
+html{ scroll-behavior: smooth; }           /* Pure CSS smooth scroll */
+
+html, body{
+  margin: 0; padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px; line-height: 1.6;
+  background: var(--bg); color: var(--ink);
+}
+
+.container{
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: calc(var(--space) * 1.25);
+}
+
+.visually-hidden{
+  position: absolute; width: 1px; height: 1px;
+  margin: -1px; padding: 0; border: 0;
+  clip: rect(0 0 0 0); overflow: hidden; white-space: nowrap;
+}
+
+/* Ensure anchored sections aren't hidden behind sticky header */
+section{ scroll-margin-top: 90px; }
+
+/* -------------------------------------------------------
+   Sticky header + mobile nav (CSS only)
+-------------------------------------------------------- */
+.site-header{
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: saturate(1.2) blur(6px);
+  -webkit-backdrop-filter: saturate(1.2) blur(6px);
+  background: color-mix(in srgb, #0d1b2a 85%, transparent);
+  color: white;
+  border-bottom: 1px solid #12263a;
+}
+.header-inner{
+  display: flex; align-items: center; justify-content: space-between;
+  padding-block: calc(var(--space) * 1.25);
+}
+.brand{ color: white; text-decoration: none; font-weight: 800; letter-spacing: .3px; }
+
+/* Desktop nav */
+.nav{ list-style: none; margin: 0; padding: 0; display: flex; gap: calc(var(--space) * 1); }
+.nav a{
+  color: white; text-decoration: none;
+  padding: 8px 12px; border-radius: 8px; border: 1px solid transparent;
+  transition: transform .15s ease, background-color .15s ease;
+}
+.nav a:hover{ background: rgba(255,255,255,.12); transform: translateY(-1px); }
+.cta-link{ background: var(--brand); color: var(--brand-ink); border-color: rgba(255,255,255,.2); }
+
+/* Hamburger (shown on small screens only) */
+.hamburger{ display: none; cursor: pointer; }
+.hamburger span{
+  display: block; width: 22px; height: 2px; background: white; margin: 5px 0; border-radius: 2px;
+}
+
+/* Mobile menu (checkbox hack) */
+@media (max-width: 860px){
+  .hamburger{ display: block; }
+  #primary-nav{ display: none; }
+  #nav-toggle:checked ~ .site-header .header-inner #primary-nav{
+    display: block;
+    position: absolute; right: 0; top: 100%;
+    background: #0d1b2a; border-bottom: 1px solid #12263a; width: 100%;
+  }
+  #nav-toggle:checked ~ .site-header .header-inner #primary-nav .nav{
+    flex-direction: column; gap: 0; padding: 8px 12px;
+  }
+  #nav-toggle:checked ~ .site-header .header-inner #primary-nav .nav a{
+    display: block; padding: 12px; border-radius: 8px;
+  }
+}
+/* Auto dark (if OS prefers) */
+@media (prefers-color-scheme: dark){
+  :root{
+    --ink: #eaf0ff;
+    --bg: hsl(220 15% 10%);
+    --brand: rgb(112, 165, 255);
+    --brand-ink: #0b1020;
+    --muted: hsl(220 15% 70%);
+    --card: hsl(220 15% 14%);
+    --border: hsl(220 15% 20%);
+    --accent: hsl(45 100% 60%);
+  }
+}
+/* -------------------------------------------------------
+   Hero (Grid + subtle animated background)
+-------------------------------------------------------- */
+.hero{
+  /* gradient that gently shifts */
+  background: linear-gradient(180deg, hsl(220 22% 99%), hsl(220 22% 96%));
+  animation: bg-pan 12s ease-in-out infinite alternate;
+  padding-block: calc(var(--space) * 3);
+}
+@keyframes bg-pan{
+  0%{ background-position: 0% 0%; }
+  100%{ background-position: 0% 80%; }
+}
+.hero-grid{
+  display: grid; grid-template-columns: 1.1fr 1fr; grid-template-areas: "copy media";
+  gap: calc(var(--space) * 2);
+}
+.hero-copy{ grid-area: copy; color: black; }
+.hero-media{ grid-area: media; }
+.hero-copy h1{ font-size: clamp(1.8rem, 1.5rem + 2vw, 3rem); line-height: 1.15; margin: 0 0 10px; }
+#hero-video{ 
+    min-width: 100%; 
+    min-height: 100%;
+    width: 400px; 
+    height: auto; 
+    background-size: cover;
+    overflow: hidden;}
+
+/* Buttons (hover effects + transitions) */
+.btn{
+  display: inline-block; background: var(--brand); color: var(--brand-ink);
+  padding: 10px 14px; margin-right: 10px; border-radius: 10px; text-decoration: none;
+  border: 2px solid transparent; font-weight: 700;
+  transition: transform .15s ease, box-shadow .2s ease, background-color .2s ease;
+}
+.btn:hover{ transform: translateY(-2px); box-shadow: 0 6px 18px rgba(42,102,255,.25); }
+.btn-ghost{ background: transparent; color: var(--brand); border-color: var(--brand); }
+
+/* -------------------------------------------------------
+   Features (Advanced grid areas)
+-------------------------------------------------------- */
+.features{ padding-block: calc(var(--space) * 3); }
+.features-grid{
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-areas:
+    "a a b b c c"
+    "a a d d d d";
+  gap: calc(var(--space) * 1.25);
+}
+.feature-a{ grid-area: a; }
+.feature-b{ grid-area: b; }
+.feature-c{ grid-area: c; }
+.feature-d{ grid-area: d; }
+
+/* Card (Box model) with subtle load-in animation */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: calc(var(--space) * 1.25);
+  animation: reveal .6s ease both;
+}
+@keyframes reveal{
+  from{ opacity: 0; transform: translateY(6px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+/* -------------------------------------------------------
+   Showcase (Flexbox cards)
+-------------------------------------------------------- */
+.showcase{ padding-block: calc(var(--space) * 3); }
+.cards{ display: flex; flex-wrap: wrap; gap: calc(var(--space) * 1.25); }
+.cards .card{ flex: 1 1 300px; transition: transform .15s ease, box-shadow .2s ease; }
+.cards .card:hover{ transform: translateY(-3px); box-shadow: 0 10px 24px rgba(0,0,0,.08); }
+.cards img{
+  width: 100%; height: auto; display: block;
+  border-radius: 10px; margin-bottom: 10px; border: 1px solid var(--border);
+}
+
+/* -------------------------------------------------------
+   Pricing (Flexbox with a highlight)
+-------------------------------------------------------- */
+.pricing{ padding-block: calc(var(--space) * 3); }
+.tiers{ display: flex; gap: calc(var(--space) * 1.25); align-items: stretch; flex-wrap: wrap; }
+.tiers .card{ flex: 1 1 260px; }
+.tiers .highlight{ border-color: var(--accent); box-shadow: 0 8px 24px rgba(0,0,0,.06); }
+
+/* -------------------------------------------------------
+   Contact + Footer
+-------------------------------------------------------- */
+.contact{ padding-block: calc(var(--space) * 2.5); }
+.site-footer{
+  background: #0d1b2a; color: white; padding-block: calc(var(--space) * 1.25);
+}
+.site-footer a{ color: #bcd2ff; }
+
+/* -------------------------------------------------------
+   Section target highlight (when navigated via hash)
+-------------------------------------------------------- */
+section:target{
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+  animation: target-pop .6s ease;
+}
+@keyframes target-pop{
+  0%{ box-shadow: 0 0 0 0 rgba(42,102,255,.35); }
+  100%{ box-shadow: 0 0 0 12px rgba(42,102,255,0); }
+}
+
+/* -------------------------------------------------------
+   Responsive breakpoints
+-------------------------------------------------------- */
+@media (max-width: 1000px){
+  .hero-grid{
+    grid-template-columns: 1fr; grid-template-areas: "copy" "media";
+  }
+}
+@media (max-width: 720px){
+  .nav a{ padding: 8px 10px; }
+  .features-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas: "a" "b" "c" "d";
+  }
+}
+
+/* -------------------------------------------------------
+   Respect reduced motion
+-------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}
