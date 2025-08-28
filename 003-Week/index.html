@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Weekend Maker Lab — Hobby Showcase</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A fun, interactive showcase of personal maker hobbies: retro handheld modding, coffee tinkering, and trail photography.">
+
+  <!-- Google Fonts (font-display=swap) -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="sticky-top bg-body shadow-sm">
+    <nav class="navbar navbar-expand-lg container" aria-label="Primary">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="fa-solid fa-screwdriver-wrench me-2 text-primary"></i>Weekend Maker Lab
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+              aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#tips">Tips</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link btn btn-primary text-white ms-lg-2" href="#community"><i class="fa-solid fa-comments"></i> Community</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero -->
+    <section id="hero" class="py-5 bg-hero overflow-hidden position-relative">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-800 animate-fade-up">Make, tweak, share — repeat</h1>
+            <p class="lead text-secondary animate-fade-up delay-1">
+              Retro handheld mods, experimental coffee brews, and trail photography. Small projects, big joy.
+            </p>
+            <div class="d-flex gap-3 animate-fade-up delay-2">
+              <a class="btn btn-primary btn-lg" href="#gallery"><i class="fa-solid fa-image"></i> See the Gallery</a>
+              <a class="btn btn-outline-secondary btn-lg" href="#tips"><i class="fa-solid fa-lightbulb"></i> Learn Tips</a>
+            </div>
+          </div>
+          <div class="col-lg-6 text-center">
+            <img class="img-fluid rounded shadow-lg animate-float" src="https://placehold.co/900x560/png"
+                 alt="A collage of a retro handheld console, a pour-over coffee setup, and a camera on a trail.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery (Grid + Cards) -->
+    <section id="gallery" class="py-5">
+      <div class="container">
+        <header class="mb-4">
+          <h2 class="h1 fw-800">Gallery</h2>
+          <p class="text-secondary mb-0">Recent snapshots from the bench, the kitchen, and the trail.</p>
+        </header>
+
+        <div class="row g-4">
+          <!-- Retro Modding -->
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 card-hover">
+              <img class="card-img-top" src="https://placehold.co/640x400/jpg" alt="Transparent shell retro handheld with backlit screen.">
+              <div class="card-body">
+                <h3 class="h5 card-title">Retro Handheld — Clear Shell</h3>
+                <p class="card-text">Clean shell swap, IPS screen, and custom buttons. Pure nostalgia.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <span class="badge text-bg-primary"><i class="fa-solid fa-gamepad"></i> Modding</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Coffee -->
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 card-hover">
+              <img class="card-img-top" src="https://placehold.co/640x400/jpg" alt="Pour-over coffee with gooseneck kettle and scale.">
+              <div class="card-body">
+                <h3 class="h5 card-title">Coffee — Dialed Pour-over</h3>
+                <p class="card-text">16:1 ratio, 92°C water, gentle spiral pour. Sweet, balanced cup.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <span class="badge text-bg-warning"><i class="fa-solid fa-mug-hot"></i> Coffee</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Photography -->
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 card-hover">
+              <img class="card-img-top" src="https://placehold.co/640x400/jpg" alt="Golden-hour landscape from a mountain trail.">
+              <div class="card-body">
+                <h3 class="h5 card-title">Trail — Golden Hour</h3>
+                <p class="card-text">Soft light, long shadows, and a quick 1/250s to freeze the breeze.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <span class="badge text-bg-success"><i class="fa-solid fa-camera"></i> Photography</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips / Tutorials (Accordion + Grid) -->
+    <section id="tips" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <header class="mb-4">
+          <h2 class="h1 fw-800">Tips &amp; Mini Tutorials</h2>
+          <p class="text-secondary mb-0">Quick wins you can try this weekend.</p>
+        </header>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <!-- Bootstrap Accordion -->
+            <div class="accordion" id="tipsAcc">
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="tip1">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1" aria-expanded="true" aria-controls="c1">
+                    <i class="fa-solid fa-gamepad me-2 text-primary"></i>Retro: IPS Screen Alignment
+                  </button>
+                </h3>
+                <div id="c1" class="accordion-collapse collapse show" aria-labelledby="tip1" data-bs-parent="#tipsAcc">
+                  <div class="accordion-body">
+                    Use low-tack tape to dry-fit, then tiny dabs of adhesive. Close the shell gently and check light bleed before final press.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="tip2">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
+                    <i class="fa-solid fa-mug-hot me-2 text-warning"></i>Coffee: Consistent Grind &amp; Bloom
+                  </button>
+                </h3>
+                <div id="c2" class="accordion-collapse collapse" aria-labelledby="tip2" data-bs-parent="#tipsAcc">
+                  <div class="accordion-body">
+                    Use a burr grinder, rinse your filter, and bloom 30–45s with ~2× dose water to de-gas before main pours.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h3 class="accordion-header" id="tip3">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
+                    <i class="fa-solid fa-camera me-2 text-success"></i>Photo: Fast Setup Checklist
+                  </button>
+                </h3>
+                <div id="c3" class="accordion-collapse collapse" aria-labelledby="tip3" data-bs-parent="#tipsAcc">
+                  <div class="accordion-body">
+                    Battery, SD space, ISO floor 200–400, shutter min 1/250s for wind, RAW + small JPEG, and set a highlight alert.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual callouts (cards via grid) -->
+          <div class="col-lg-6">
+            <div class="row g-4">
+              <div class="col-12">
+                <div class="p-4 rounded-3 border bg-white card-hover">
+                  <h3 class="h5 mb-2"><i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i>Starter Kits</h3>
+                  <p class="mb-0">A clear-shell handheld kit, V60 + scale, and a compact 35mm prime lens will cover 90% of weekend fun.</p>
+                </div>
+              </div>
+              <div class="col-12">
+                <div class="p-4 rounded-3 border bg-white card-hover">
+                  <h3 class="h5 mb-2"><i class="fa-solid fa-layer-group text-primary me-2"></i>Project Stacking</h3>
+                  <p class="mb-0">Pair a quick mod + a new brew recipe + one photo loop to keep the momentum (and learning) rolling.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="py-5">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-md-5 text-center">
+            <img class="img-fluid rounded-4 shadow-sm tilt-on-hover" src="https://placehold.co/520x520/jpg"
+                 alt="A desk with tools, beans, and a camera laid out neatly.">
+          </div>
+          <div class="col-md-7">
+            <h2 class="h1 fw-800">About the Lab</h2>
+            <p class="text-secondary">
+              The goal is simple: choose approachable projects, document what worked, and share the joy. Mistakes are part of the process—and often the best stories.
+            </p>
+            <ul class="list-unstyled lh-lg">
+              <li><i class="fa-solid fa-check text-success me-2"></i> Maker-friendly projects you can finish in a weekend</li>
+              <li><i class="fa-solid fa-check text-success me-2"></i> Transparent recipes and settings, not vague “magic”</li>
+              <li><i class="fa-solid fa-check text-success me-2"></i> Photos that celebrate small wins and good light</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community / Contact -->
+    <section id="community" class="py-5 bg-body-tertiary">
+      <div class="container">
+        <header class="mb-4">
+          <h2 class="h1 fw-800">Join the Community</h2>
+          <p class="text-secondary mb-0">Swap tips, share builds, and celebrate tiny victories.</p>
+        </header>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="p-4 rounded-3 border bg-white h-100">
+              <h3 class="h5 mb-3"><i class="fa-brands fa-discord text-primary me-2"></i> Hangout</h3>
+              <p class="mb-1">Hop into the chat and show what you’re building.</p>
+              <a class="btn btn-outline-primary" href="#" aria-disabled="true"><i class="fa-brands fa-discord"></i> Discord (coming soon)</a>
+              <hr>
+              <h3 class="h5 mb-3"><i class="fa-solid fa-hashtag text-primary me-2"></i> Hashtag</h3>
+              <p class="mb-0">Tag builds with <strong>#WeekendMakerLab</strong> on your favorite platform.</p>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <!-- Mailto form for simplicity -->
+            <form class="p-4 rounded-3 border bg-white h-100" action="mailto:contact@notaproxy.lol" method="post" enctype="text/plain">
+              <h3 class="h5 mb-3"><i class="fa-solid fa-paper-plane text-primary me-2"></i> Say hello</h3>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input id="name" name="Name" type="text" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input id="email" name="Email" type="email" class="form-control" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea id="message" name="Message" rows="4" class="form-control" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary"><i class="fa-solid fa-paper-plane"></i> Send</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container small text-center">
+      © <span id="year">2025</span> Weekend Maker Lab · Built with Bootstrap
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle (for navbar/accordion) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

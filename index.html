@@ -1,21 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code Academy Portfolio</title>
-    <meta name="description" content="A portfolio showcasing projects and skills learned from Code Academy Bootcamp.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Academy Portfolio</title>
+  <meta name="description" content="A portfolio showcasing projects and skills learned from Code Academy Bootcamp.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Code Academy Portfolio</h1>
-    <nav aria-label="Main Navigation">
-        <ul>
-            <li><a href="/001-Week">Week 1</a></li>
-            <li><a href="/002-Week">Week 2</a></li>
-            <li><a href="/003-Week">Week 3</a></li>
-            <li><a href="/004-Week">Week 4</a></li>
-        </ul>
-    </nav>
+  <h1>Code Academy Portfolio</h1>
 
+  <div class="projects" role="list">
+    <!-- Week 1 -->
+    <article class="project" role="listitem">
+      <div class="preview">
+        <iframe src="/001-Week" title="Preview of Week 1 project"></iframe>
+        <!-- Transparent overlay link covers the preview -->
+        <a class="overlay" href="/001-Week" aria-label="Open Week 1 Project"></a>
+      </div>
+      <a class="project-link" href="/001-Week">Week 1 Project</a>
+    </article>
+
+    <!-- Week 2 -->
+    <article class="project" role="listitem">
+      <div class="preview">
+        <iframe src="/002-Week" title="Preview of Week 2 project"></iframe>
+        <a class="overlay" href="/002-Week" aria-label="Open Week 2 Project"></a>
+      </div>
+      <a class="project-link" href="/002-Week">Week 2 Project</a>
+    </article>
+
+    <!-- Week 3 -->
+    <!-- <article class="project" role="listitem">
+      <div class="preview">
+        <iframe src="/003-Week" title="Preview of Week 3 project"></iframe>
+        <a class="overlay" href="/003-Week" aria-label="Open Week 3 Project"></a>
+      </div>
+      <a class="project-link" href="/003-Week">Week 3 Project</a>
+    </article> -->
+
+    <!-- Week 4 -->
+    <!-- <article class="project" role="listitem">
+      <div class="preview">
+        <iframe src="/004-Week" title="Preview of Week 4 project"></iframe>
+        <a class="overlay" href="/004-Week" aria-label="Open Week 4 Project"></a>
+      </div>
+      <a class="project-link" href="/004-Week">Week 4 Project</a>
+    </article> -->
+  </div>
 </body>
 </html>
