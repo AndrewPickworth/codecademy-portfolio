@@ -239,8 +239,11 @@ function resetCalculator() {
   result = "";
 }
 
+let cowSoundIndex = 0;
+
 function playCowSounds() {
-  let index = Math.floor(Math.random() * 5);
+  let index = cowSoundIndex % 5 + 1;
+  cowSoundIndex++;
   const audio = new Audio(`Cow${index}.mp3`);
   audio.play();
 }

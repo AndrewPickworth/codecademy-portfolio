@@ -8,17 +8,19 @@
   <meta name="description" content="A portfolio showcasing projects and skills learned from Code Academy Bootcamp.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"
+    referrerpolicy="no-referrer">
   <link href="styles.css" rel="stylesheet">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-root-margin="0px 0px +30%"
+<body data-bs-spy="scroll" data-bs-target="#navbarSupportedContent" data-bs-root-margin="0px 0px -30%"
   data-bs-smooth-scroll="true" tabindex="0">
 
   <header class="sticky-top shadow-sm">
     <nav class="navbar navbar-expand-lg bg-translucent">
       <div class="container-fluid">
-        <img class="logo me-3" src="Logo.gif" height="50px" alt="Logo" />
-        <a class="navbar-brand" href="#main">Andrew's Portfolio</a>
+        <img src="Logo.gif" height="50" alt="Logo">
+        <a class="navbar-brand ms-3" href="#main">Andrew's Portfolio</a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,7 +56,7 @@
           </ul>
 
           <form id="pageSearch" class="d-flex ms-lg-3 mt-3 mt-lg-0" role="search">
-            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+            <input id="searchInput" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
           </form>
         </div>
@@ -73,9 +75,9 @@
               turning prototypes into field-ready tools.
             </p>
             <div class="d-flex gap-3 animate-fade-up delay-2">
-              <a class="btn btn-primary btn-lg" href="#portfolio"><i class="fa-solid fa-image"></i> See Portfolio</a>
-              <a class="btn btn-outline-secondary btn-lg" href="#skills"><i class="fa-solid fa-lightbulb"></i> Skills
-                set</a>
+              <a class="btn btn-primary btn-lg" href="#portfolio"><i class="fa-solid fa-images"></i> See Portfolio</a>
+              <a class="btn btn-outline-secondary btn-lg" href="#skills"><i class="fa-solid fa-toolbox"></i> Skills
+                Set</a>
             </div>
           </div>
           <div class="col-lg-6 text-center">
@@ -85,6 +87,7 @@
         </div>
       </div>
     </section>
+
     <section id="portfolio" class="py-5">
       <div class="container">
         <header class="mb-4">
@@ -94,7 +97,7 @@
 
         <div class="row g-4">
           <article class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 card-hover">
+            <div class="card h-100 hover-pop">
               <iframe class="card-img-top" src="001-Week/index.html" height="300"
                 title="Preview of Week 1 project"></iframe>
               <div class="card-body">
@@ -103,13 +106,13 @@
                 <a href="001-Week/index.html" class="stretched-link"></a>
               </div>
               <div class="card-footer bg-transparent border-0 pt-0">
-                <span class="badge text-bg-primary"><i class="fa-solid"></i> HTML</span>
+                <span class="badge text-bg-primary"><i class="fa-solid fa-code"></i> HTML</span>
               </div>
             </div>
           </article>
 
           <article class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 card-hover">
+            <div class="card h-100 hover-pop">
               <iframe class="card-img-top" src="002-Week/index.html" height="300"
                 title="Preview of Week 2 project"></iframe>
               <div class="card-body">
@@ -118,14 +121,14 @@
                 <a href="002-Week/index.html" class="stretched-link"></a>
               </div>
               <div class="card-footer bg-transparent border-0 pt-0">
-                <span class="badge text-bg-primary"><i class="fa-solid"></i> HTML</span>
-                <span class="badge text-bg-warning"><i class="fa-solid"></i>CSS</span>
+                <span class="badge text-bg-primary"><i class="fa-solid fa-code"></i> HTML</span>
+                <span class="badge text-bg-warning"><i class="fa-solid fa-palette"></i> CSS</span>
               </div>
             </div>
           </article>
 
           <article class="col-12 col-md-6 col-lg-4">
-            <div class="card h-100 card-hover">
+            <div class="card h-100 hover-pop">
               <iframe class="card-img-top" src="004-Week/index.html" height="300"
                 title="Preview of Week 4 project"></iframe>
               <div class="card-body">
@@ -134,9 +137,26 @@
                 <a href="004-Week/index.html" class="stretched-link"></a>
               </div>
               <div class="card-footer bg-transparent border-0 pt-0">
-                <span class="badge text-bg-primary"><i class="fa-solid"></i> HTML</span>
-                <span class="badge text-bg-warning"><i class="fa-solid"></i>CSS</span>
-                <span class="badge text-bg-success"><i class="fa-solid"></i> JavaScript</span>
+                <span class="badge text-bg-primary"><i class="fa-solid fa-code"></i> HTML</span>
+                <span class="badge text-bg-warning"><i class="fa-solid fa-palette"></i> CSS</span>
+                <span class="badge text-bg-success"><i class="fa-solid fa-bolt"></i> JavaScript</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 hover-pop">
+              <iframe class="card-img-top" src="005-Week/index.html" height="300"
+                title="Preview of Week 5 project"></iframe>
+              <div class="card-body">
+                <h3 class="h5 card-title">Week 5</h3>
+                <p class="card-text">The JavaScript Advanced Concepts</p>
+                <a href="005-Week/index.html" class="stretched-link"></a>
+              </div>
+              <div class="card-footer bg-transparent border-0 pt-0">
+                <span class="badge text-bg-primary"><i class="fa-solid fa-code"></i> HTML</span>
+                <span class="badge text-bg-warning"><i class="fa-solid fa-palette"></i> CSS</span>
+                <span class="badge text-bg-success"><i class="fa-solid fa-bolt"></i> JavaScript</span>
               </div>
             </div>
           </article>
@@ -155,35 +175,34 @@
           <div class="col-lg-6">
             <div class="row g-4">
               <div class="col-12">
-                <div class="p-4 rounded-3 border bg-white card-hover">
-                  <h3 class="h5 mb-2"><i class="fa-solid fa-wand-magic-sparkles text-primary me-2"></i>Engineering
+                <div class="p-4 rounded-3 border bg-white">
+                  <h3 class="h5 mb-2"><i class="fa-solid fa-cube  text-primary me-2"></i>Engineering
                     Fundamentals</h3>
-                  <p class="mb-0">Comfortable moving between bare-metal bring-up and higher-level frameworks,
-                    I focus on establishing reliable baselines: clocks stable, GPIO maps correct,
-                    sensors returning coherent values. Once the fundamentals are deterministic,
-                    higher abstractions (BLE flows, telemetry pipelines) can be layered with
-                    confidence.</p>
+                  <p class="mb-0">Comfortable moving between bare-metal bring-up and higher-level frameworks, I focus on
+                    establishing reliable baselines: clocks stable, GPIO maps correct, sensors returning coherent
+                    values. Once the fundamentals are deterministic, higher abstractions (BLE flows, telemetry
+                    pipelines) can be layered with confidence.</p>
                 </div>
               </div>
               <div class="col-12">
-                <div class="p-4 rounded-3 border bg-white card-hover">
+                <div class="p-4 rounded-3 border bg-white">
                   <h3 class="h5 mb-2"><i class="fa-solid fa-layer-group text-primary me-2"></i>Tools & Stack</h3>
-                  <p class="mb-0"> Tooling is chosen to minimize friction: ESP-IDF/Arduino for device-side work,
-                    LVGL for display logic, Python for instrumentation and quick ET₀ checks,
-                    Node/Express or simple REST endpoints when backends are needed. I prefer
-                    composable, loosely-coupled layers where each part can be tested and reasoned
-                    about in isolation.</p>
+                  <p class="mb-0">Tooling is chosen to minimize friction: ESP-IDF/Arduino for device-side work, LVGL for
+                    display logic, Python for instrumentation and quick ET₀ checks, Node/Express or simple REST
+                    endpoints when backends are needed. I prefer composable, loosely-coupled layers where each part can
+                    be tested and reasoned about in isolation.</p>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="col-lg-6">
             <div class="accordion" id="tipsAcc">
               <div class="accordion-item">
                 <h3 class="accordion-header" id="tip1">
                   <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#c1"
                     aria-expanded="true" aria-controls="c1">
-                    <i class="fa-solid fa-gamepad me-2 text-primary"></i>Embedded & IoT
+                    <i class="fa-solid fa-microchip me-2 text-primary"></i>Embedded & IoT
                   </button>
                 </h3>
                 <div id="c1" class="accordion-collapse collapse show" aria-labelledby="tip1" data-bs-parent="#tipsAcc">
@@ -203,7 +222,7 @@
                 <h3 class="accordion-header" id="tip2">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#c2" aria-expanded="false" aria-controls="c2">
-                    <i class="fa-solid fa-mug-hot me-2 text-warning"></i>Data & Integration
+                    <i class="fa-solid fa-code-branch me-2 text-primary"></i>Data & Integration
                   </button>
                 </h3>
                 <div id="c2" class="accordion-collapse collapse" aria-labelledby="tip2" data-bs-parent="#tipsAcc">
@@ -221,7 +240,7 @@
                 <h3 class="accordion-header" id="tip3">
                   <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#c3" aria-expanded="false" aria-controls="c3">
-                    <i class="fa-solid fa-camera me-2 text-success"></i>Product & Collaboration
+                    <i class="fa-solid fa-user-gear me-2 text-primary"></i>Product & Collaboration
                   </button>
                 </h3>
                 <div id="c3" class="accordion-collapse collapse" aria-labelledby="tip3" data-bs-parent="#tipsAcc">
@@ -236,12 +255,11 @@
               </div>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
 
-    <!-- About -->
     <section id="about" class="py-5">
       <div class="container">
         <div class="row g-4 align-items-center">
@@ -256,19 +274,15 @@
               option — that's probably where my love of practical engineering started. I still get a strange
               satisfaction out of solving problems with minimal tools, whether that's debugging a stubborn ESP32
               peripheral or finding a way to repair a cracked plastic enclosure with cable ties and epoxy.
-
               Outside of work, I've always had a fascination with aviation. I spent several years with the Australian
               Airforce Cadets, which taught me discipline and teamwork, but also gave me a lifelong obsession with
               aircraft cockpits, checklists, and the quiet order of airfields. If I'm not tinkering with electronics,
               I'm probably reading up on flight systems or watching planes take off.
-
               I'm also the kind of person who dives deep into small details: I care about battery draw down to the
               microamp, I enjoy reading datasheets like most people read novels, and I'll happily spend hours comparing
               how two different compilers optimize the same code.
-
               But I'm not all circuits and sensors — I enjoy the outdoors as much as the lab bench. A long walk clears
-              my head, and I often come back with
-              better ideas for both code and hardware.
+              my head, and I often come back with better ideas for both code and hardware.
             </p>
           </div>
         </div>
@@ -288,13 +302,10 @@
               <p class="mb-0">Hop into the Discord server or drop by Instagram to share what you’re building and connect
                 with others.</p>
               <hr>
-              <a class="btn btn-outline-primary me-3" href="https://www.instagram.com/andrewpickworth"
-                aria-disabled="true">Instagram</a>
-              <a class="btn btn-outline-primary me-3" href="https://discord.com/users/362559777865203722"
-                aria-disabled="true">Discord</a>
-              <a class="btn btn-outline-primary me-3" href="https://github.com/andrewpickworth"
-                aria-disabled="true">GitHub</a>
-              <a class="btn btn-outline-primary" href="mailto:contact@notaproxy.lol" aria-disabled="true">Email</a>
+              <a class="btn btn-outline-primary me-3" href="https://www.instagram.com/andrewpickworth">Instagram</a>
+              <a class="btn btn-outline-primary me-3" href="https://discord.com/users/362559777865203722">Discord</a>
+              <a class="btn btn-outline-primary me-3" href="https://github.com/andrewpickworth">GitHub</a>
+              <a class="btn btn-outline-primary" href="mailto:contact@notaproxy.lol">Email</a>
             </div>
           </div>
 
@@ -328,6 +339,7 @@
       © <span id="year">2025</span> Portfolio · Built with Bootstrap
     </div>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>

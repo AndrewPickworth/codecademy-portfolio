@@ -45,14 +45,19 @@ button {
   transition: background-color 0.2s;
 }
 
-.number,
+.number1 {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.number2,
 .decimal {
-  background-color: #666;
+  background-color: #00000054;
   color: white;
 }
 
 .operator {
-  background-color: #ff9500;
+  background-color: #e683ca;
   color: white;
 }
 
@@ -62,7 +67,7 @@ button {
 }
 
 .equals {
-  background-color: #ff9500;
+  background-color: #e683ca;
   color: white;
 }
 
